@@ -17,9 +17,12 @@
 
 .owl-carousel .owl-stage {
     position: relative;
-    -ms-touch-action: pan-Y;
-    -moz-backface-visibility: hidden
+    touch-action: pan-y;
+    -ms-touch-action: pan-y;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
+
 
 .owl-carousel .owl-stage:after {
     content: ".";
@@ -33,21 +36,25 @@
 .owl-carousel .owl-stage-outer {
     position: relative;
     overflow: hidden;
-    -webkit-transform: translate3d(0, 0, 0)
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
 
 .owl-carousel .owl-item {
+    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0)
+    -ms-transform: translate3d(0, 0, 0);
 }
 
 .owl-carousel .owl-item {
     min-height: 1px;
     float: left;
+    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     -webkit-touch-callout: none
 }
@@ -168,6 +175,7 @@
     background: url(owl.video.play.html) no-repeat;
     cursor: pointer;
     z-index: 1;
+    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     transition: transform .1s ease
 }
