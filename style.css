@@ -1083,6 +1083,7 @@ input:required {
   display: block;
   margin-bottom: 0;
   background: -webkit-linear-gradient(#ff9696, #ffe89e);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1598,7 +1599,6 @@ input:required {
 }
 
 .post-author-area .popular-tags li {
-  display: inline-block;
   float: left;
   margin: 3px;
 }
