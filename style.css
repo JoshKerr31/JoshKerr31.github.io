@@ -159,21 +159,11 @@ h6 {
   transform: rotate(45deg);
 }
 
-#social-sidebar a[class*="twitter"]:hover,
-#social-sidebar a[class*="twitter"] span,
-#social-sidebar a[class*="twitter"] span:before {
-  background: #00aced;
-}
 
-#social-sidebar a[class*="facebook"]:hover,
-#social-sidebar a[class*="facebook"] span,
-#social-sidebar a[class*="facebook"] span:before {
-  background: #3b5998;
-}
 
-#social-sidebar a[class*="gplus"]:hover,
-#social-sidebar a[class*="gplus"] span,
-#social-sidebar a[class*="gplus"] span:before {
+#social-sidebar a[class*="guru"]:hover,
+#social-sidebar a[class*="guru"] span,
+#social-sidebar a[class*="guru"] span:before {
   background: #e34429;
 }
 
@@ -181,18 +171,6 @@ h6 {
 #social-sidebar a[class*="instagrem"] span,
 #social-sidebar a[class*="instagrem"] span:before {
   background: #ea4c89;
-}
-
-#social-sidebar a[class*="linkedin"]:hover,
-#social-sidebar a[class*="linkedin"] span,
-#social-sidebar a[class*="linkedin"] span:before {
-  background: #0a416e;
-}
-
-#social-sidebar a[class*="github"]:hover,
-#social-sidebar a[class*="github"] span,
-#social-sidebar a[class*="github"] span:before {
-  background: #9c7a5b;
 }
 
 a,
