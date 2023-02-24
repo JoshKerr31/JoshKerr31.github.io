@@ -16,9 +16,10 @@ you can use the generic selector below, but it's slower:
 [class*="your-class-prefix"] {
 */
 
+
+
 .arrow_left, .arrow_right, .arrow_triangle-right, .icon_house_alt {
 	font-family: 'ElegantIcons';
-	speak: none;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
@@ -41,4 +42,14 @@ you can use the generic selector below, but it's slower:
 
 .icon_house_alt:before {
 	content: "\e009";
+}
+
+.col-12 {
+	position: relative;
+}
+
+.section-heading {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 }
