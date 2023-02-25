@@ -159,14 +159,6 @@ h6 {
   transform: rotate(45deg);
 }
 
-
-
-#social-sidebar a[class*="guru"]:hover,
-#social-sidebar a[class*="guru"] span,
-#social-sidebar a[class*="guru"] span:before {
-  background: #e34429;
-}
-
 #social-sidebar a[class*="instagrem"]:hover,
 #social-sidebar a[class*="instagrem"] span,
 #social-sidebar a[class*="instagrem"] span:before {
