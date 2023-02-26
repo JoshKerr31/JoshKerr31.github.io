@@ -1,1 +1,210 @@
-(function(a){"use strict";var t=a(window);if(t.on("load",function(){a("#preloader").fadeOut("1000",function(){a(this).remove()})}),a.fn.classyNav&&a("#lxNav").classyNav(),a.fn.owlCarousel){var o=a(".welcome-slides");o.owlCarousel({items:1,loop:!0,autoplay:!0,smartSpeed:1e3,autoplayTimeout:1e4,nav:!0,navText:['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>']}),o.on("translate.owl.carousel",function(){var t=a("[data-animation]");t.each(function(){var t=a(this).data("animation");a(this).removeClass("animated "+t).css("opacity","0")})}),a("[data-delay]").each(function(){var t=a(this).data("delay");a(this).css("animation-delay",t)}),a("[data-duration]").each(function(){var t=a(this).data("duration");a(this).css("animation-duration",t)}),o.on("translated.owl.carousel",function(){var t=o.find(".owl-item.active").find("[data-animation]");t.each(function(){var t=a(this).data("animation");a(this).addClass("animated "+t).css("opacity","1")})})}if(a.fn.owlCarousel){var e=a(".instragram-feed-area");e.owlCarousel({items:6,loop:!0,autoplay:!0,smartSpeed:1e3,autoplayTimeout:3e3,responsive:{0:{items:2},576:{items:3},768:{items:4},992:{items:5},1200:{items:6}}})}a.fn.imagesLoaded&&a(".lx-portfolio").imagesLoaded(function(){a(".portfolio-menu").on("click","button",function(){var o=a(this).attr("data-filter");t.isotope({filter:o})});var t=a(".lx-portfolio").isotope({itemSelector:".single_gallery_item",percentPosition:!0,masonry:{columnWidth:".single_gallery_item"}})}),a(".portfolio-menu button.btn").on("click",function(){a(".portfolio-menu button.btn").removeClass("active"),a(this).addClass("active")}),a(".search-btn").on("click",function(){a(".search-form").toggleClass("search-form-active")}),t.on("scroll",function(){t.scrollTop()>0?a(".main-header-area").addClass("sticky"):a(".main-header-area").removeClass("sticky")}),a.fn.magnificPopup&&(a(".video-play-btn").magnificPopup({type:"iframe"}),a(".portfolio-img").magnificPopup({type:"image",gallery:{enabled:!0,preload:[0,2],navigateByImgClick:!0,tPrev:"Previous",tNext:"Next"}})),a.fn.tooltip&&a('[data-toggle="tooltip"]').tooltip(),t.width()>767&&(new WOW).init(),a.fn.jarallax&&a(".jarallax").jarallax({speed:.5}),a.fn.scrollUp&&t.scrollUp({scrollSpeed:1e3,scrollText:'<i class="fas fa-arrow-up"></i>'}),a('a[href="#"]').on("click",function(a){a.preventDefault()})})(jQuery);
+(function ($) {
+    'use strict';
+
+    var lx_window = $(window);
+
+    // ****************************
+    // :: 1.0 Preloader Active Code
+    // ****************************
+
+    lx_window.on('load', function () {
+        $('#preloader').fadeOut('1000', function () {
+            $(this).remove();
+        });
+    });
+
+    // ****************************
+    // :: 2.0 ClassyNav Active Code
+    // ****************************
+
+    if ($.fn.classyNav) {
+        $('#lxNav').classyNav();
+    }
+
+    // *********************************
+    // :: 3.0 Welcome Slides Active Code
+    // *********************************
+
+    if ($.fn.owlCarousel) {
+        var welcomeSlider = $('.welcome-slides');
+        welcomeSlider.owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            smartSpeed: 1000,
+            autoplayTimeout: 10000,
+            nav: true,
+            navText: [('<i class="fas fa-chevron-left"></i>'), ('<i class="fas fa-chevron-right"></i>')]
+        })
+
+        welcomeSlider.on('translate.owl.carousel', function () {
+            var layer = $("[data-animation]");
+            layer.each(function () {
+                var anim_name = $(this).data('animation');
+                $(this).removeClass('animated ' + anim_name).css('opacity', '0');
+            });
+        });
+
+        $("[data-delay]").each(function () {
+            var anim_del = $(this).data('delay');
+            $(this).css('animation-delay', anim_del);
+        });
+
+        $("[data-duration]").each(function () {
+            var anim_dur = $(this).data('duration');
+            $(this).css('animation-duration', anim_dur);
+        });
+
+        welcomeSlider.on('translated.owl.carousel', function () {
+            var layer = welcomeSlider.find('.owl-item.active').find("[data-animation]");
+            layer.each(function () {
+                var anim_name = $(this).data('animation');
+                $(this).addClass('animated ' + anim_name).css('opacity', '1');
+            });
+        });
+    }
+
+    // ************************************
+    // :: 4.0 Instragram Slides Active Code
+    // ************************************
+
+    if ($.fn.owlCarousel) {
+        var instagramFeedSlider = $('.instragram-feed-area');
+        instagramFeedSlider.owlCarousel({
+            items: 6,
+            loop: true,
+            autoplay: true,
+            smartSpeed: 1000,
+            autoplayTimeout: 3000,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                576: {
+                    items: 3
+                },
+                768: {
+                    items: 4
+                },
+                992: {
+                    items: 5
+                },
+                1200: {
+                    items: 6
+                }
+            }
+        })
+    }
+
+    // *********************************
+    // :: 5.0 Masonary Gallery Active Code
+    // *********************************
+
+    if ($.fn.imagesLoaded) {
+        $('.lx-portfolio').imagesLoaded(function () {
+            // filter items on button click
+            $('.portfolio-menu').on('click', 'button', function () {
+                var filterValue = $(this).attr('data-filter');
+                $grid.isotope({
+                    filter: filterValue
+                });
+            });
+            // init Isotope
+            var $grid = $('.lx-portfolio').isotope({
+                itemSelector: '.single_gallery_item',
+                percentPosition: true,
+                masonry: {
+                    columnWidth: '.single_gallery_item'
+                }
+            });
+        });
+    }
+
+    // ***********************************
+    // :: 6.0 Portfolio Button Active Code
+    // ***********************************
+    
+    $('.portfolio-menu button.btn').on('click', function () {
+        $('.portfolio-menu button.btn').removeClass('active');
+        $(this).addClass('active');
+    })
+
+    // ********************************
+    // :: 7.0 Search Button Active Code
+    // ********************************
+    $('.search-btn').on('click', function () {
+        $('.search-form').toggleClass('search-form-active');
+    })
+
+    // ************************
+    // :: 8.0 Stick Active Code
+    // ************************
+
+    lx_window.on('scroll', function () {
+        if (lx_window.scrollTop() > 0) {
+            $('.main-header-area').addClass('sticky');
+        } else {
+            $('.main-header-area').removeClass('sticky');
+        }
+    });
+
+    // *********************************
+    // :: 9.0 Magnific Popup Active Code
+    // *********************************
+    if ($.fn.magnificPopup) {
+        $('.video-play-btn').magnificPopup({
+            type: 'iframe'
+        });
+        $('.portfolio-img').magnificPopup({
+            type: 'image',
+            gallery: {
+                enabled: true,
+                preload: [0, 2],
+                navigateByImgClick: true,
+                tPrev: 'Previous',
+                tNext: 'Next'
+            }
+        });
+    }
+
+    // **************************
+    // :: 10.0 Tooltip Active Code
+    // **************************
+    if ($.fn.tooltip) {
+        $('[data-toggle="tooltip"]').tooltip();
+    }
+
+    // ***********************
+    // :: 11.0 WOW Active Code
+    // ***********************
+    if (lx_window.width() > 767) {
+        new WOW().init();
+    }
+
+    // ****************************
+    // :: 12.0 Jarallax Active Code
+    // ****************************
+    if ($.fn.jarallax) {
+        $('.jarallax').jarallax({
+            speed: 0.5
+        });
+    }
+
+    // ****************************
+    // :: 13.0 Scrollup Active Code
+    // ****************************
+    if ($.fn.scrollUp) {
+        lx_window.scrollUp({
+            scrollSpeed: 1000,
+            scrollText: '<i class="fas fa-arrow-up"></i>'
+        });
+    }
+
+    // *********************************
+    // :: 14.0 Prevent Default 'a' Click
+    // *********************************
+    $('a[href="#"]').on('click', function ($) {
+        $.preventDefault();
+    });
+
+})(jQuery);
