@@ -90,7 +90,7 @@ h4,
 h5,
 h6 {
   font-family: "Poppins", sans-serif;
-  color: #252525;
+  color: #ffffff;
   line-height: 1.3;
   font-weight: 600;
 }
@@ -183,7 +183,7 @@ li {
 
 p {
   line-height: 1.9;
-  color: #636363;
+  color: #ffffff;
   font-size: 16px;
   font-weight: 400;
 }
@@ -635,7 +635,7 @@ input:required {
 }
 
 .lx-btn.btn-2 {
-  color: #252525;
+  color: #ffffff;
 }
 
 .lx-btn:focus,
@@ -2638,9 +2638,9 @@ footer {
 body {
   height: 100%;
   width: 100%;
-  background: linear-gradient(45deg, yellow, violet, orange, grey);
+  background: linear-gradient(45deg, #101922, #0f0f22, #150d22, #200e22, #222222);
   background-size: 300% 300%;
-  animation: color 5s ease-in-out infinite;
+  animation: color 10s ease-in-out infinite;
 }
 
 @keyframes color {
