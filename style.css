@@ -252,7 +252,7 @@ ul li {
   width: 100%;
   top: 20px;
   width: 30px;
-  background: #fc6060;
+  background: #3a3a3a;
   height: 30px;
   line-height: 30px;
 }
@@ -264,7 +264,7 @@ img.mfp-img {
 
 button.mfp-close,
 button.mfp-arrow {
-  background: #fc6060;
+  background: #3a3a3a;
 }
 
 .mfp-bottom-bar {
@@ -582,7 +582,7 @@ input:required {
   width: 40px;
   height: 40px;
   bottom: 40px;
-  background-color: #fc6060;
+  background-color: #3a3a3a;
   color: #ffffff;
   text-align: center;
   -webkit-transition-duration: 500ms;
@@ -2278,7 +2278,7 @@ input:required {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background-color: #fc6060;
+  background-color: #3a3a3a;
   text-align: center;
   line-height: 52px;
   font-size: 30px;
